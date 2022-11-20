@@ -282,7 +282,7 @@
     
         min-height: 581px;
         min-width: 528px;
-        padding: 15px;
+        padding: 40px;
 
     
         background-color: var(--primary-white-color);
@@ -432,7 +432,6 @@
       }
       
       .contact-form-checkbox-input:focus + .contact-form-checkbox-label::before {
-        outline: 2px solid var(--accent-color);
         outline-offset: 2px;   
         fill: var(--primary-text-color);          
       }
@@ -464,8 +463,12 @@
 
      .icon-close {
         position: absolute;
- 
         cursor: pointer;
+     }
+
+     .icon-close:hover,
+     .icon-close:focus {
+        fill: var(--accent-color);
      }
 
     .header-container {
@@ -913,13 +916,18 @@
         height: 50px;
         padding: 15px 16px;
         
-        color: var(primary-white-color);
+        color: var(--primary-white-color);
+        outline: transparent;
       
         border: 1px solid rgba(255, 255, 255, 0.3);  
         border-radius: 4px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         background-color: transparent;
       }
+    .footer-form-input:hover,
+    .footer-form-input:focus {
+        border: 1px solid var(--accent-color);  
+    }
       
       .footer-form-input::placeholder {  
         line-height: 1.25;
@@ -948,6 +956,7 @@
         display: inline-flex;
         align-items: center;
         color: var(--primary-white-color);
+        outline: transparent;
       }
       
       .footer-form-btn-text::after {  
